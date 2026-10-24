@@ -9,3 +9,43 @@
 .stars{color:#FFC94D;letter-spacing:2px;font-size:15px}
 
 .badge{display:inline-block;padding:7px 12px;border-radius:50px;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:1px;border:1px solid #ffffff47;background:#0f0b20df;color:#fff}
+/* LIGHT MODE (Flower, 2026-10-24) — the same rainbow scales under a daylight veil */
+body.light{background-image:linear-gradient(rgba(252,250,244,.80),rgba(252,250,244,.80)),url('assets/scales-bg-ballpython.jpg');color:#241f31}
+body.light header{background:#fffdf7f2;border-bottom-color:#e3dac8}
+body.light .topbar{background:#efe6f9;color:#3a2b52;border-bottom-color:#ddd0ee}
+body.light .topbar span{color:#4d7c0f}
+body.light .sub,body.light .meta,body.light .form-note,body.light .step p,body.light .detail-side p,body.light .footer p,body.light .stat span,body.light .list-info small{color:#5d5570}
+body.light .eyebrow{color:#4d7c0f}
+body.light .text-link,body.light .proof b{color:#0e7490}
+body.light .panel,body.light .art-card,body.light .step,body.light .tier,body.light .stat{background:#fffdf7;border-color:#e2d9c6}
+body.light .tier ul{color:#3c3550}
+body.light .field,body.light select,body.light textarea{background:#ffffff;color:#241f31;border-color:#cfc4ac}
+body.light input::placeholder,body.light textarea::placeholder{color:#8a8199}
+body.light .form-group label{color:#3c3550}
+body.light .outline{background:#fffdf7;color:#241f31;border-color:#b7a888}
+body.light .small-btn,body.light .mini-btn{background:#efe9db;color:#241f31;border-color:#cfc4ac}
+body.light .navicon{background:#fffdf7;border-color:#ddd2ba;color:#241f31}
+body.light .art-actions button{background:#efe9db;color:#241f31;border-color:#cfc4ac}
+body.light .art-actions button:last-child{background:var(--cyan);color:#07101c;border:0}
+body.light .chip{background:#f1ead9;color:#3c3550;border-color:#ddd2ba}
+body.light .section.alt{background:#f4efe3}
+body.light .footer{background:#f3eee1;border-top-color:#ddd2ba}
+body.light .hero{background-image:linear-gradient(90deg,rgba(255,253,248,.94) 0%,rgba(255,253,248,.78) 45%,rgba(255,253,248,.30) 78%),url('assets/scales-bg-ballpython.jpg')}
+body.light .hero:after{background:linear-gradient(transparent,rgba(252,250,244,.92))}
+body.light .hero p{color:#4c4560}
+body.light .page-hero{background:radial-gradient(circle at 85% 20%,#ffd7efb8,transparent 35%),linear-gradient(130deg,rgba(255,253,248,.90),rgba(255,253,248,.82)),url('assets/scales-bg-ballpython.jpg') center/cover;border-bottom-color:#e3dac8}
+body.light .chat-layout{border-color:#ddd2ba}
+body.light .chat-list{background:#f7f2e7;border-right-color:#ddd2ba}
+body.light .chat-main{background:#fffdf7}
+body.light .chat-contact{color:#241f31}
+body.light .chat-contact.active{background:#ead9f2}
+body.light .bubble{background:#efe9f5;color:#241f31}
+body.light .bubble.mine{background:#c2439b;color:#fff}
+body.light .chat-compose{border-top-color:#ddd2ba}
+body.light .notice{background:#fdf3d7;border-color:#d9b95c;color:#5c4a12}
+body.light .artist-spot{background:linear-gradient(130deg,#ffeef8,#e8f6ff)}
+body.light .list-row{border-bottom-color:#e2d9c6}
+body.light [style*="background:#241a08"]{color:#f7f2ff}
+body.light [style*="color:#fff"]{color:#241f31!important}
+body.light [style*="color:#7CFC9A"]{color:#1d9e4b!important}
+
