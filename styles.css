@@ -4,4 +4,4 @@
 /* Visual fix: keep artwork visible */
 .hero h1{font-size:clamp(64px,7.6vw,114px);line-height:.86;max-width:650px}.hero h2{font-size:clamp(24px,2.5vw,38px);max-width:720px}.hero p{max-width:480px}.hero{min-height:740px;background-image:linear-gradient(90deg,#070611eb 0%,#080613cb 31%,#0a061010 72%),url("assets/scales-bg-ballpython.jpg");background-position:center}.hero .shell{padding-top:30px;padding-bottom:40px}@media(max-width:720px){.hero h1{font-size:clamp(63px,13vw,92px)}.hero{background-image:linear-gradient(90deg,#080615dc,#09061a66),url("assets/scales-bg-ballpython.jpg");min-height:650px}}
 
-.brand-snake{height:19px;width:auto;flex:none;filter:drop-shadow(0 1px 3px rgba(0,0,0,.45))}
+.brand-snake{height:22px;width:auto;flex:none;filter:drop-shadow(0 1px 3px rgba(0,0,0,.45))}
