@@ -49,3 +49,25 @@ body.light [style*="background:#241a08"]{color:#f7f2ff}
 body.light [style*="color:#fff"]{color:#241f31!important}
 body.light [style*="color:#7CFC9A"]{color:#1d9e4b!important}
 
+
+/* COMMISSION BOARD (ops queue #1, 2026-10-25) */
+.pills{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:26px}
+.pill{background:#201a32;color:#e9e2f5;border:1px solid #5c4b72;padding:10px 17px;font-size:12.5px}
+.pill:hover{border-color:var(--cyan);color:#fff}
+.pill.active{background:linear-gradient(95deg,#fa258e,#ffb82f,#00d9fa);color:#0d0915;border-color:transparent}
+.brief-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}
+.brief-card{display:flex;flex-direction:column}
+.brief-card h3{font-family:'Cinzel',serif;font-weight:800;font-size:21px;line-height:1.25;margin:12px 0 4px}
+.brief-meta{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.brief-details{color:var(--muted);line-height:1.7;flex:1;margin:0}
+.brief-foot{display:flex;align-items:center;gap:11px;margin-top:18px;padding-top:16px;border-top:1px solid #43364f}
+.brief-buyer{display:flex;align-items:center;gap:9px;flex:1;min-width:0}
+.brief-avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(45deg,#ed2088,#4be7ec);font-size:18px;font-weight:900;color:#fff;flex:none}
+.brief-foot .outline{padding:11px 18px;white-space:nowrap}
+@media(max-width:1050px){.brief-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.brief-grid{grid-template-columns:1fr}}
+body.light .pill{background:#fffdf7;color:#241f31;border-color:#cfc4ac}
+body.light .pill:hover{border-color:#0e7490;color:#241f31}
+body.light .pill.active{background:linear-gradient(95deg,#fa258e,#ffb82f,#00d9fa);color:#0d0915;border-color:transparent}
+body.light .brief-details{color:#5d5570}
+body.light .brief-foot{border-top-color:#e2d9c6}
