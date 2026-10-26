@@ -369,3 +369,20 @@ body.light .studio-move{background:linear-gradient(130deg,#fdf3d8,#fffdf7)}
 body.light .pipe-head{color:#241f31}
 body.light .pipe-group + .pipe-group{border-top-color:#e2d9c6}
 @media(max-width:720px){.studio-stats{grid-template-columns:1fr 1fr}}
+
+/* SELLER-INTENT SEO PAGES (queue 8, 2026-10-26) — sell-art-online / etsy-alternative / commissions */
+.answer-block{border:2px solid var(--purple);background:linear-gradient(130deg,#1e1538,#181328)}
+.answer-block p{font-size:17px;line-height:1.8;color:#f2ecfc;max-width:920px;margin:10px 0 2px}
+.steps-four{grid-template-columns:repeat(2,1fr)}
+.guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.guide-card{display:flex;flex-direction:column;gap:7px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;transition:transform .2s}
+.guide-card:hover{transform:translateY(-3px);border-color:var(--purple)}
+.guide-card b{font-family:'Cinzel',serif;font-size:17px;letter-spacing:.5px;color:#fff}
+.guide-card span{color:var(--muted);line-height:1.6;font-size:13.5px}
+.guide-card em{font-style:normal;font-weight:900;font-size:12px;color:var(--cyan);letter-spacing:1px;margin-top:4px}
+body.light .answer-block{background:linear-gradient(130deg,#f3eafd,#fffdf7);border-color:#c9a7f5}
+body.light .answer-block p{color:#332a4a}
+body.light .guide-card{background:#fffdf7;border-color:#ddd2ba}
+body.light .guide-card b{color:#241f31}
+body.light .guide-card span{color:#5d5570}
+@media(max-width:720px){.steps-four,.guide-grid{grid-template-columns:1fr}}
