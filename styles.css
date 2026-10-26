@@ -93,3 +93,21 @@ body.light .navlinks{border-top-color:#e3dac8}
 body.light .foot-col h4{color:#241f31}
 body.light .foot-col a,body.light .foot-col .foot-link{color:#5d5570}
 body.light .foot-col a:hover,body.light .foot-col .foot-link:hover{color:#0e7490}
+/* RED CARPET — Flower Mills star page (brand surface; full spectacle by design) */
+.carpet-hero{position:relative;background:radial-gradient(circle at 88% 12%,rgba(255,189,36,.28),transparent 38%),linear-gradient(120deg,rgba(90,6,26,.93),rgba(38,4,20,.94) 55%,rgba(16,3,14,.96)),url('assets/scales-bg-ballpython.jpg') center/cover;padding:74px 0 64px;border-bottom:1px solid #ffbd2455;overflow:hidden}
+.carpet-name{filter:drop-shadow(0 0 30px rgba(255,189,36,.30))}
+.gold{background:linear-gradient(95deg,#ffedb0,#ffbd24 48%,#ff8a3d);-webkit-background-clip:text;background-clip:text;color:transparent}
+.carpet-role{font-family:'Cinzel',serif;font-weight:800;letter-spacing:4px;font-size:clamp(15px,2.2vw,21px);color:#ffd76a;margin:4px 0 16px}
+.carpet-frame{position:relative;flex:none;width:min(340px,80vw);margin-top:34px}
+.carpet-photo{width:100%;display:block;border-radius:20px;border:3px solid #ffbd24;box-shadow:0 24px 60px rgba(0,0,0,.6),0 0 44px rgba(255,189,36,.25);aspect-ratio:4/4.6;object-fit:cover;object-position:center 22%}
+.carpet-crown{position:absolute;top:-64px;left:-46px;width:158px;transform:rotate(-7deg);filter:drop-shadow(0 14px 20px rgba(0,0,0,.55));z-index:2}
+.carpet-strip{height:16px;background:linear-gradient(90deg,#6d0a20,#c1122f 30%,#8f0e27 55%,#c1122f 80%,#6d0a20);border-top:2px solid #ffbd24;border-bottom:2px solid #ffbd24}
+.lineage-panel{background:linear-gradient(120deg,#2a0a1c,#1a1030);border-color:#8a6a2f}
+.carpet-link{color:#ffd76a;text-decoration:underline;text-underline-offset:3px}
+.carpet-gallery{grid-template-columns:repeat(2,1fr)}
+.steps.carpet-steps{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1050px){.steps.carpet-steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.carpet-gallery{grid-template-columns:1fr}.steps.carpet-steps{grid-template-columns:1fr}.carpet-crown{width:110px;top:-44px;left:-10px}.carpet-frame{margin-top:52px}}
+body.light .lineage-panel{background:linear-gradient(120deg,#3a0e22,#241536);color:#f7eef2}
+body.light .lineage-panel .section-title{color:#fff}
+body.light .lineage-panel p{color:#e9dfe8}
