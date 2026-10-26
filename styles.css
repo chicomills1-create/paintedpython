@@ -258,3 +258,14 @@ body.light .slots-chip.full{color:#8a6a12}
 body.light .f100-bignum{color:#241f31}
 body.light .f100-bar,body.light .lane-bar{background:#f1ead9;border-color:#ddd2ba}
 body.light .f100-hero{background:radial-gradient(circle at 85% 15%,rgba(255,189,36,.35),transparent 40%),linear-gradient(130deg,rgba(255,253,248,.92),rgba(255,253,248,.86)),url('assets/scales-bg-ballpython.jpg') center/cover}
+
+/* SHARE CARDS (queue 4) */
+.share-overlay{position:fixed;inset:0;z-index:90;background:rgba(5,3,12,.8);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:18px;overflow:auto}
+.share-sheet{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:20px;max-width:660px;width:100%;padding:24px;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.share-sheet h3{font-family:'Cinzel',serif;letter-spacing:1px;margin:0 44px 6px 0;color:#fff}
+.share-preview{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block;margin:16px 0}
+.share-row{display:flex;flex-wrap:wrap;gap:10px}
+.share-row .primary,.share-row .outline{flex:1 1 150px;display:inline-flex;align-items:center;justify-content:center;text-align:center;margin-top:0}
+.share-x{position:absolute;top:14px;right:14px;padding:8px 13px;border-radius:50px}
+body.light .share-sheet{background:#fffdf7}
+body.light .share-sheet h3{color:#241f31}
