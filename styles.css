@@ -305,3 +305,41 @@ body.light .fresh-tile{background:#fffdf7;border-color:#ddd2ba;color:#241f31}
 body.light .fresh-tile b{color:#241f31}
 body.light .alert-ic{background:#efe9db;border-color:#cfc4ac}
 body.light .alert-row{border-bottom-color:#e2d9c6}
+
+/* MEMBERSHIP + SERPENT CIRCLE PERFECTION PASS (2026-10-26) — promise bar, comparison table, Circle, fee-stack strip */
+.promise-bar{display:flex;gap:16px;align-items:center;border:2px solid var(--gold);background:#221a08;border-radius:18px;padding:18px 22px;margin-bottom:24px}
+.promise-bar .promise-mark{font-family:'Cinzel',serif;font-weight:800;color:var(--gold);white-space:nowrap;letter-spacing:.5px}
+.promise-bar p{line-height:1.65;color:#f0e9d8}
+.promise-bar b{color:#fff}
+.tier-blurb{color:var(--muted);line-height:1.6;font-size:13.5px;margin:10px 0 2px}
+.compare-panel{margin-top:22px}
+.compare-wrap{overflow-x:auto}
+table.compare{width:100%;border-collapse:collapse;min-width:560px}
+.compare th,.compare td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;font-size:14px;line-height:1.5}
+.compare tr:first-child th{font-family:'Cinzel',serif;color:#fff;border-bottom:2px solid var(--purple)}
+.compare th[scope="row"]{color:var(--muted);font-weight:600;white-space:nowrap}
+.compare td{color:#e8e1f2}
+.circle-list{list-style:none;padding:0;display:grid;gap:18px}
+.circle-list li{display:grid;gap:4px;justify-items:start}
+.circle-list b{color:#fff;font-size:16px}
+.circle-list span{color:var(--muted);line-height:1.6}
+.launch-tag{font-style:normal;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);border-radius:999px;padding:2px 9px}
+.stack-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.stack-col{border:1px solid var(--line);border-radius:16px;padding:20px;background:#17122a}
+.stack-col.ours{border-color:var(--purple)}
+.stack-col h4{font-family:'Cinzel',serif;margin-bottom:10px;color:#fff}
+.stack-col ul{color:#e1d9ec;line-height:1.9;padding-left:20px;font-size:14px}
+@media(max-width:820px){.stack-cols{grid-template-columns:1fr}.promise-bar{flex-direction:column;align-items:flex-start;gap:6px}}
+body.light .promise-bar{background:#fdf3d8;border-color:#d9a92c}
+body.light .promise-bar p{color:#4a3f16}
+body.light .promise-bar b{color:#241f31}
+body.light .tier-blurb{color:#5d5570}
+body.light .compare th,body.light .compare td{border-bottom-color:#e2d9c6}
+body.light .compare tr:first-child th{color:#241f31}
+body.light .compare th[scope="row"]{color:#5d5570}
+body.light .compare td{color:#3c3550}
+body.light .circle-list b{color:#241f31}
+body.light .circle-list span{color:#5d5570}
+body.light .stack-col{background:#fffdf7}
+body.light .stack-col h4{color:#241f31}
+body.light .stack-col ul{color:#3c3550}
