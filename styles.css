@@ -111,3 +111,68 @@ body.light .foot-col a:hover,body.light .foot-col .foot-link:hover{color:#0e7490
 body.light .lineage-panel{background:linear-gradient(120deg,#3a0e22,#241536);color:#f7eef2}
 body.light .lineage-panel .section-title{color:#fff}
 body.light .lineage-panel p{color:#e9dfe8}
+
+/* HEADER CLEANUP (queue 2d, 2026-10-25) — one even desktop bar; hamburger sheet below 1024px.
+   Replaces the v29 two-tier scroll strip. Later in the file on purpose: these rules
+   override the base header rules and the IA-reorganization block above. */
+.navbar{flex-wrap:nowrap;row-gap:0;padding-top:0;padding-bottom:0;min-height:76px;gap:20px}
+.navlinks{order:0;width:auto;flex-wrap:wrap;overflow:visible;border-top:0;padding:0;margin-inline:auto;justify-content:center;gap:clamp(16px,2vw,30px)}
+.navright{margin-left:0;flex:none;gap:10px}
+.navsearch{flex:0 1 200px;max-width:200px;min-width:0}
+.navsearch .field{padding:11px 16px;border-radius:100px;min-width:0}
+.navsearch .search-go{flex:none;padding:11px 15px;border-radius:100px}
+.search-toggle{display:none}
+.burger{display:none;font-size:19px;align-items:center;justify-content:center}
+.mobile-sheet{display:none}
+.sheet-scrim{display:none}
+/* Tight desktop band: search collapses to an expanding icon, labels compact */
+@media(min-width:1024px) and (max-width:1399px){
+ .navbar{gap:14px}
+ .navsearch{flex:none;max-width:none}
+ .navsearch .field,.navsearch .search-go{display:none}
+ .navsearch.open .field{display:block;width:150px;flex:none}
+ .navsearch.open .search-go{display:block}
+ .search-toggle{display:inline-block}
+}
+@media(min-width:1024px) and (max-width:1249px){
+ .navbar{max-width:none;padding:0 16px}
+ .brand{font-size:23px}
+ .navlinks{gap:13px;font-size:12px}
+ .navright{gap:7px}
+ .navright .navicon{width:36px;height:36px}
+ .navright .small-btn{padding:10px 13px}
+ .navright .sellart{padding:10px 13px!important}
+ .navright .hide-mobile{display:none}
+}
+/* Mobile / tablet: hamburger + dropdown sheet, no sideways nav scrolling */
+@media(max-width:1023px){
+ .navbar{flex-wrap:nowrap;gap:12px}
+ .navlinks{display:none}
+ .navsearch{display:none}
+ .navright{margin-left:auto}
+ .navright .desk{display:none}
+ .burger{display:inline-flex}
+ .mobile-sheet{display:block;position:absolute;top:100%;left:0;right:0;z-index:2;background:#0b0620f7;backdrop-filter:blur(20px);border-bottom:1px solid #ffffff24;box-shadow:0 30px 50px #00000070;padding:16px 5% 22px;opacity:0;visibility:hidden;transform:translateY(-10px);pointer-events:none;transition:opacity .22s ease,transform .22s ease,visibility .22s}
+ .mobile-sheet.open{opacity:1;visibility:visible;transform:none;pointer-events:auto}
+ .sheet-scrim{display:block;position:fixed;inset:0;z-index:1;background:#05030a9e}
+ .sheet-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+ .sheet-title{font-family:'Cinzel',serif;font-size:12px;font-weight:800;letter-spacing:3px;color:#cfc4e8}
+ .sheet-x{width:36px;height:36px;font-size:14px}
+ .sheetsearch{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+ .sheetsearch .field{padding:12px 16px;border-radius:100px;min-width:0}
+ .sheetsearch button{flex:none;padding:12px 16px;border-radius:100px}
+ .sheetnav{display:flex;flex-direction:column}
+ .sheetnav a{padding:13px 2px;font-size:15px;font-weight:800;letter-spacing:.6px;color:#fff;border-bottom:1px solid #ffffff14}
+ .sheetnav a:last-child{border-bottom:0}
+ .sheet-utils{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+ .sheet-btn{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:#1c1430;border:1px solid #433658;color:#fff;border-radius:14px;padding:13px 16px;font-size:14px;font-weight:800;cursor:pointer}
+ .sheet-count{background:var(--pink);color:#fff;font-size:11px;font-weight:900;border-radius:100px;min-width:20px;padding:2px 6px;text-align:center;margin-left:auto}
+ .sheet-sell{width:100%;padding:14px;font-size:13px;margin-top:4px}
+}
+/* Light mode: the sheet reads as a clean cream panel */
+body.light .mobile-sheet{background:#fffdf7f9;border-bottom-color:#e3dac8;box-shadow:0 30px 50px #3a2b5233}
+body.light .sheet-title{color:#7a6c96}
+body.light .sheetnav a{color:#241f31;border-bottom-color:#e9e0cd}
+body.light .sheet-btn{background:#ffffff;border-color:#ddd2ba;color:#241f31}
+body.light .sheet-scrim{background:#241f3152}
+body.light .burger{background:#fffdf7;border-color:#ddd2ba;color:#241f31}
