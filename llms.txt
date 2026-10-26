@@ -1,0 +1,50 @@
+# Painted Python
+
+> Painted Python is an online marketplace where independent artists sell original, human-made art and take commissions directly from collectors. No AI-generated work is sold here. Front door: https://paintedpython.com/
+
+Painted Python is built for the next generation of artists, and for collectors who would rather buy from a person than a warehouse. You browse by category, message the artist who made the piece, and agree the work in that same conversation — the artist's name comes before the price.
+
+## What Painted Python is
+
+- Founded by Flower Mills, Creator & Founder — the artist who created Painted Python. Her rule for this place: real art, by real artists, signed by the hand that made it.
+- Human-made only: no AI-generated work is sold here.
+- Open to teenagers and adults: you must be 13 or older to join. Painted Python does not create accounts for children under 13.
+- Current state, stated on the site itself: the front door is a working prototype — demo purchases and memberships are not live.
+
+## House rules on money
+
+- Every keep figure is labeled "after platform fee"; processing is shown at checkout.
+- The No-Trap Promise: join in a tap, cancel in two taps — from your account, any time. No emails, no phone calls, no guilt trips.
+
+## Membership tiers (artists)
+
+- Hatchling — Free: 5 live listings, buyer messaging. Platform fee 8% per sale — you keep $184 on a $200 sale after platform fee.
+- Python — $9.99/month: unlimited listings, commissions + analytics. Platform fee 5% per sale — you keep $190 on a $200 sale after platform fee.
+- Viper Vanguard — $19.99/month: unlimited listings, commissions + analytics, featured placement, verified badge, live drop events. Platform fee 3% per sale — you keep $194 on a $200 sale after platform fee.
+
+## For collectors
+
+- The Serpent Circle — $7.99/month: early drops, first commission slots, and the collection vault.
+
+## Founding 100
+
+- The first 100 artists to build this house lock Python at $6/month for 24 months (standard Python is $9.99/month), get 60 free days to onboard, save $95.76 across the lock, and carry the Founding Python badge forever.
+
+## Key surfaces
+
+Painted Python is a single-page app: the links below are app routes that open inside https://paintedpython.com/.
+
+- Explore: https://paintedpython.com/#/explore — browse original art by category.
+- Commission Board: https://paintedpython.com/#/board — buyers post commission briefs; artists pitch in the thread.
+- Artists: https://paintedpython.com/#/artists — the artist directory.
+- Top Sellers: https://paintedpython.com/#/top
+- Artist Spotlight: https://paintedpython.com/#/spotlight — one artist on the stage each week.
+- Sell: https://paintedpython.com/#/sell — open a studio and list a piece.
+- Membership: https://paintedpython.com/#/membership — the tiers above, with the full comparison table.
+- Founding 100: https://paintedpython.com/#/founding100
+- Flower Mills — The Red Carpet: https://paintedpython.com/#/flower — the founder's page.
+- Meet the Creator: https://paintedpython.com/#/creator
+
+## Contact
+
+- Conversations happen on Painted Python itself: message the artist who made the piece, and agree the work in that same conversation.
