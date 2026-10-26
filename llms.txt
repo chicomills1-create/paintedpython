@@ -42,6 +42,7 @@ Painted Python is a single-page app: the links below are app routes that open in
 - Sell: https://paintedpython.com/#/sell — open a studio and list a piece.
 - Sell Art Online: https://paintedpython.com/#/sell-art-online — for artists: how selling works here, the tiers, and what you keep.
 - Etsy Alternative: https://paintedpython.com/#/etsy-alternative — a $200 sale run through both fee stacks; Etsy’s published components on one side, Painted Python’s one fee on the other.
+- Drops: https://paintedpython.com/#/drops — themed drop events on a published rhythm: a new wall every other Friday at 6:00 PM, running through Sunday night.
 - Commissions: https://paintedpython.com/#/commissions — how commissions run here: brief, pitch, structured proposal, stage rail, delivery.
 - Membership: https://paintedpython.com/#/membership — the tiers above, with the full comparison table.
 - Founding 100: https://paintedpython.com/#/founding100

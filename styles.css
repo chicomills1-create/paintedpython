@@ -386,3 +386,12 @@ body.light .guide-card{background:#fffdf7;border-color:#ddd2ba}
 body.light .guide-card b{color:#241f31}
 body.light .guide-card span{color:#5d5570}
 @media(max-width:720px){.steps-four,.guide-grid{grid-template-columns:1fr}}
+
+/* DROP EVENTS (ops queue #9, 2026-10-26) */
+.dropbar-sec{padding:30px 0 0}
+.dropbar{display:flex;justify-content:space-between;align-items:center;gap:16px;background:linear-gradient(95deg,#fa258e,#ffb82f,#00d9fa);color:#0d0915;border-radius:100px;padding:13px 24px;font-weight:900;letter-spacing:.6px;font-size:13px;box-shadow:0 9px 35px #ed2c8b42}
+.dropbar:hover{filter:brightness(1.08)}
+.dropbar-go{flex:none;letter-spacing:1px}
+.drop-count{font-family:'Cinzel Decorative',serif;font-size:clamp(28px,4.2vw,50px);font-weight:900;line-height:1.05;color:var(--gold)}
+body.light .drop-count{color:#b97f06}
+@media(max-width:720px){.dropbar{border-radius:20px;flex-wrap:wrap}}
