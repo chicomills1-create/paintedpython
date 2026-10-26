@@ -357,3 +357,15 @@ body.light .spot-stage{background:linear-gradient(130deg,#ffeef8,#e8f6ff);border
 body.light .spot-past-tile{background:#fffdf7;border-color:#ddd2ba;color:#241f31}
 body.light .spot-past-tile b{color:#241f31}
 @media(max-width:720px){.spot-stage{flex-direction:column;padding:28px}.spot-avatar{width:118px;height:118px;font-size:58px}}
+
+/* PROOF-OF-SELLING STUDIO (queue 7, 2026-10-26) — numbers, pipeline, standing */
+.studio-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:17px}
+.studio-move{border:2px solid var(--gold);background:linear-gradient(130deg,#241a08,#1a1630)}
+.studio-door{max-width:640px;margin:auto}
+.pipe-group{padding:12px 0 2px}
+.pipe-group + .pipe-group{border-top:1px dashed #43364f;margin-top:10px}
+.pipe-head{font-family:'Cinzel',serif;letter-spacing:1px;font-size:16px;color:#fff;margin-bottom:2px}
+body.light .studio-move{background:linear-gradient(130deg,#fdf3d8,#fffdf7)}
+body.light .pipe-head{color:#241f31}
+body.light .pipe-group + .pipe-group{border-top-color:#e2d9c6}
+@media(max-width:720px){.studio-stats{grid-template-columns:1fr 1fr}}
