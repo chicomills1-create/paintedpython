@@ -196,3 +196,48 @@ body.light .burger{background:#fffdf7;border-color:#ddd2ba;color:#241f31}
 @media(min-width:1500px){
  .navsearch{flex:0 1 clamp(150px,11vw,200px);max-width:200px}
 }
+
+/* BOARD DEPTH (queue 1b, 2026-10-25) — structured proposals, pipeline stages,
+   queue slots, surprise-me briefs. Fee figures labeled "after platform fee". */
+.prop-zone{padding:18px 19px;border-bottom:1px solid #43364f;background:#171128}
+.proposal-card{border:1px solid #876399;background:#201834;border-radius:15px;padding:18px;margin-bottom:14px}
+.prop-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.prop-closed-badge{background:#5c2436;color:#ffb3c2}
+.stage-rail{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:12px 0 4px}
+.stage{font-size:10px;font-weight:900;letter-spacing:1px;padding:6px 10px;border-radius:50px;border:1px solid #5c4b72;color:#a99cbb;background:#171128}
+.stage.done{border-color:#2e7d4f;color:#8fe6b0}
+.stage.now{border-color:var(--gold);color:#0d0915;background:var(--gold)}
+.stage.closed{border-color:#8a3b52;color:#ff9db4}
+.stage-arrow{color:#6f6186;font-size:11px}
+.prop-items{margin:10px 0}
+.prop-item{display:flex;justify-content:space-between;gap:14px;padding:7px 0;border-bottom:1px dashed #43364f;font-size:14px}
+.prop-item.subtotal{border-bottom:0;font-weight:900}
+.prop-addon{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:9px 0;border-bottom:1px dashed #43364f;font-size:14px}
+.prop-addon-r{display:flex;align-items:center;gap:10px}
+.prop-total{display:flex;justify-content:space-between;font-size:21px;font-weight:900;padding:12px 0 4px}
+.prop-fee{color:#cfc4e8;font-size:13px;line-height:1.6;margin:4px 0}
+.prop-builder{border:1px dashed #5c4b72;border-radius:15px;padding:18px}
+.prop-builder summary{cursor:pointer;font-weight:900;letter-spacing:.5px}
+.prop-builder.open{border-style:solid;background:#1b152e}
+.prop-offers{display:flex;flex-direction:column;gap:8px;font-size:14px}
+.prop-offers label{display:flex;gap:9px;align-items:center;cursor:pointer}
+.brief-types{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.type-card{display:block;border:1px solid #5c4b72;border-radius:12px;padding:13px 14px;background:#201a32;cursor:pointer;line-height:1.5}
+.type-card b{letter-spacing:1px}
+.type-card span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+.surprise-badge{background:linear-gradient(95deg,#ffbd24,#ff8a3d);color:#22140a;border-color:transparent}
+.slots-chip{border-color:#2e7d4f;color:#b8ffd2}
+.slots-chip.full{border-color:#8a6a2f;color:#ffd76a}
+@media(max-width:720px){.brief-types{grid-template-columns:1fr}.prop-zone{padding:14px}}
+body.light .prop-zone{background:#f7f2e7;border-bottom-color:#e2d9c6}
+body.light .proposal-card{background:#fffdf7;border-color:#d9b95c}
+body.light .prop-item,body.light .prop-addon{border-bottom-color:#e2d9c6}
+body.light .prop-fee{color:#5d5570}
+body.light .prop-builder.open{background:#fffdf7}
+body.light .type-card{background:#ffffff;border-color:#cfc4ac}
+body.light .type-card span{color:#5d5570}
+body.light .stage{background:#f1ead9;color:#5d5570;border-color:#cfc4ac}
+body.light .stage.now{background:var(--gold);color:#22140a;border-color:#d9a514}
+body.light .stage.done{color:#1d7a43;border-color:#7fbf97}
+body.light .slots-chip{color:#1d7a43}
+body.light .slots-chip.full{color:#8a6a12}
