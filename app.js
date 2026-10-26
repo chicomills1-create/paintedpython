@@ -8,7 +8,7 @@ const SEED=[
 {id:7,title:'Golden Hour',artist:'Sam Rivera',price:175,category:'Photography',medium:'Fine art print',symbol:'🌅',bg:'linear-gradient(145deg,#fdc42c,#fd5a46,#7c1e9f)',tag:'Popular',description:'A rich sunset study captured in glowing warm tones.'},
 {id:8,title:'Wild Current',artist:'River Quinn',price:510,category:'Sculpture',medium:'Hand-shaped resin',symbol:'🌀',bg:'linear-gradient(135deg,#17378c,#11cccf,#a2e02f)',tag:'Original',description:'A powerful piece exploring water, motion, and emergence.'}
 ];
-const STORE={listings:'slither-listings-v1',likes:'slither-likes-v1',cart:'slither-cart-v1',messages:'slither-messages-v1',seller:'slither-seller-v1',signup:'slither-signup-v1',theme:'slither-theme-v1',profile:'slither-profile-v1',known:'slither-known-v1',directory:'slither-directory-v1',accounts:'slither-accounts-v1',briefs:'slither-briefs-v1',pitchbonus:'slither-pitchbonus-v1',proposals:'slither-proposals-v1',founding:'slither-founding-v1'};
+const STORE={listings:'slither-listings-v1',likes:'slither-likes-v1',cart:'slither-cart-v1',messages:'slither-messages-v1',seller:'slither-seller-v1',signup:'slither-signup-v1',theme:'slither-theme-v1',profile:'slither-profile-v1',known:'slither-known-v1',directory:'slither-directory-v1',accounts:'slither-accounts-v1',briefs:'slither-briefs-v1',pitchbonus:'slither-pitchbonus-v1',proposals:'slither-proposals-v1',founding:'slither-founding-v1',install:'slither-install-v1'};
 const get=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}};
 const set=(key,value)=>localStorage.setItem(key,JSON.stringify(value));
 const all=()=>[...SEED,...get(STORE.listings,[])];
@@ -338,3 +338,59 @@ window.keepCalc=function(v){var p=Number(v)||0;document.getElementById('keepVal'
 // Preview-proof navigation: tabs are links whose default action is a hash change,
 // which some preview windows swallow. Intercept and route through go() instead.
 document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href^="#/"]'):null;if(!a)return;e.preventDefault();go(a.getAttribute('href').slice(1));});
+
+// ——— PWA STAGE 0 — the installable front door ———
+// Progressive enhancement only: if any piece is unavailable (file:// preview,
+// an older browser, a test stub), the site runs exactly as before. No push,
+// no notification permission — installing is the whole offer at this stage.
+const PWA_DISMISS_MS=30*24*60*60*1000; // a dismissal buys 30 quiet days
+let pwaPrompt=null;        // the captured beforeinstallprompt event (Chromium family)
+let pwaBarElCache=null;    // the coaching bar element, built once, lives on <body>
+function pwaStandalone(){try{return !!((window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches)||(window.navigator&&window.navigator.standalone===true))}catch(e){return false}}
+function pwaDismissedRecently(){try{let t=Number(get(STORE.install,0))||0;return t>0&&(Date.now()-t)<PWA_DISMISS_MS}catch(e){return false}}
+function pwaIsIOS(){try{let ua=(window.navigator&&window.navigator.userAgent)||'';return /iphone|ipad|ipod/i.test(ua)||(ua.indexOf('Macintosh')>-1&&typeof document!=='undefined'&&'ontouchend' in document)}catch(e){return false}}
+function pwaRegisterSW(){try{
+  if(typeof navigator==='undefined'||!('serviceWorker' in navigator))return false;
+  if(!/^https?:$/.test(location.protocol||''))return false; // http(s) only — never file:// or previews
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+  return true;
+}catch(e){return false}}
+function pwaBar(){try{
+  if(pwaBarElCache)return pwaBarElCache;
+  let el=document.createElement('div');
+  el.id='ppInstallBar';el.className='install-bar';el.hidden=true;
+  document.body.appendChild(el);
+  pwaBarElCache=el;
+  return el;
+}catch(e){return null}}
+function pwaShowBar(ios){
+  let el=pwaBar();if(!el)return;
+  try{
+    el.innerHTML=ios
+      ?'<div class="install-copy"><b>Install Painted Python</b><span>Keep the Board in your pocket — tap <b>Share</b>, then <b>Add to Home Screen</b>.</span></div><button type="button" class="small-btn install-ok">GOT IT</button><button type="button" class="install-x" aria-label="Dismiss install tip">✕</button>'
+      :'<div class="install-copy"><b>Install Painted Python</b><span>Keep the Board in your pocket — your marketplace, one tap from your home screen.</span></div><button type="button" class="primary install-go">INSTALL</button><button type="button" class="install-x" aria-label="Dismiss install tip">✕</button>';
+    el.hidden=false;
+    let x=el.querySelector('.install-x');if(x&&x.addEventListener)x.addEventListener('click',pwaDismissBar);
+    let goBtn=el.querySelector('.install-go');if(goBtn&&goBtn.addEventListener)goBtn.addEventListener('click',pwaInstallNow);
+    let ok=el.querySelector('.install-ok');if(ok&&ok.addEventListener)ok.addEventListener('click',pwaDismissBar);
+  }catch(e){}
+}
+function pwaHideBar(){try{if(pwaBarElCache)pwaBarElCache.hidden=true;else{let el=document.getElementById('ppInstallBar');if(el)el.hidden=true}}catch(e){}}
+function pwaDismissBar(){try{set(STORE.install,Date.now())}catch(e){} pwaHideBar()}
+function pwaInstallNow(){
+  let p=pwaPrompt;if(!p)return;
+  try{p.prompt();if(p.userChoice&&typeof p.userChoice.then==='function')p.userChoice.then(function(){pwaPrompt=null;pwaHideBar()})}catch(e){pwaHideBar()}
+}
+function pwaMaybeShowBar(){
+  if(pwaStandalone())return;          // already installed — never coach
+  if(pwaDismissedRecently())return;   // dismissed — quiet for 30 days, no nag loops
+  if(pwaPrompt){pwaShowBar(false);return}
+  if(pwaIsIOS())pwaShowBar(true);     // iOS Safari fires no prompt — coach the Share path
+}
+function pwaInit(){
+  try{window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();pwaPrompt=e;pwaMaybeShowBar()})}catch(e){}
+  try{window.addEventListener('appinstalled',function(){pwaPrompt=null;pwaHideBar()})}catch(e){}
+  pwaRegisterSW();
+  pwaMaybeShowBar(); // covers iOS, where the prompt event never fires
+}
+try{pwaInit()}catch(e){}
