@@ -5,11 +5,14 @@
    Not promised here: push, background sync, offline form posts.
    Rules: GET only, same-origin only, POST and cross-origin are never
    touched. Pages are network-first; static assets are cache-first. */
-const CACHE = 'pp-shell-v45';
-const CORE = ['/', '/index.html', '/app.js?v=45', '/styles.css?v=45', '/manifest.webmanifest'];
+const CACHE = 'pp-shell-v46';
+const CORE = ['/', '/index.html', '/app.js?v=46', '/styles.css?v=46', '/manifest.webmanifest'];
 const ASSETS = ['/icon-192.png', '/icon-512.png', '/maskable-512.png',
   '/apple-touch-icon.png', '/assets/scales-bg-ballpython.jpg', '/assets/hero-plate.webp',
-  '/assets/painty-evolved.webp', '/assets/founders-plate.webp'];
+  '/assets/painty-evolved.webp', '/assets/founders-plate.webp', '/assets/plate-pandora.webp',
+  '/assets/plate-grotto.webp', '/assets/piece-serpent.webp', '/assets/piece-universe.webp',
+  '/assets/piece-golden.webp', '/assets/piece-botanica.webp', '/assets/piece-bloom.webp',
+  '/assets/piece-otherworld.webp', '/assets/logo-emblem.webp', '/assets/logo-mark.webp', '/assets/piece-electric.webp', '/assets/piece-current.webp'];
 
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) {
