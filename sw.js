@@ -5,8 +5,8 @@
    Not promised here: push, background sync, offline form posts.
    Rules: GET only, same-origin only, POST and cross-origin are never
    touched. Pages are network-first; static assets are cache-first. */
-const CACHE = 'pp-shell-v43';
-const CORE = ['/', '/index.html', '/app.js?v=43', '/styles.css?v=43', '/manifest.webmanifest'];
+const CACHE = 'pp-shell-v44';
+const CORE = ['/', '/index.html', '/app.js?v=44', '/styles.css?v=44', '/manifest.webmanifest'];
 const ASSETS = ['/icon-192.png', '/icon-512.png', '/maskable-512.png',
   '/apple-touch-icon.png', '/assets/scales-bg-ballpython.jpg'];
 

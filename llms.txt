@@ -6,7 +6,8 @@ Painted Python is built for the next generation of artists, and for collectors w
 
 ## What Painted Python is
 
-- Founded by Flower Mills, Creator & Founder — the artist who created Painted Python. Her rule for this place: real art, by real artists, signed by the hand that made it.
+- Co-founders: Flower Mills (the artist who founded it) and Jeremy Chico Mills (Co-Founder & CEO)
+- Her rule for this place: real art, by real artists, signed by the hand that made it.
 - Human-made only: no AI-generated work is sold here.
 - Open to teenagers and adults: you must be 13 or older to join. Painted Python does not create accounts for children under 13.
 - Current state, stated on the site itself: the front door is a working prototype — demo purchases and memberships are not live.
@@ -47,6 +48,7 @@ Painted Python is a single-page app: the links below are app routes that open in
 - Membership: https://paintedpython.com/#/membership — the tiers above, with the full comparison table.
 - Founding 100: https://paintedpython.com/#/founding100
 - Flower Mills — The Red Carpet: https://paintedpython.com/#/flower — the founder's page.
+- Co-Founders: https://paintedpython.com/#/founders — Flower Mills (Co-Founder) and Jeremy Chico Mills (Co-Founder & CEO).
 - Meet the Creator: https://paintedpython.com/#/creator
 
 ## Contact
