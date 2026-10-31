@@ -673,3 +673,31 @@ body.light .avatar-mono{background:#EFE9DB;color:#7A6234;border-color:#B7A888}
 .foot-brand .brand-emblem{width:30px;height:30px}
 button[data-action="contact"]{white-space:nowrap}
 @media(max-width:720px){.brand{font-size:19px;gap:7px}.brand-emblem{width:34px;height:34px}.foot-brand .brand{font-size:20px}button[data-action="contact"]{padding:10px 13px;font-size:11px;letter-spacing:.4px}}
+
+/* ===== PHASE 3 — DAILY EDIT · COMMISSION MATCH · FOLLOWS · MENU SHEET FIX =====
+   Menu sheet (founder screenshot, 2026-10-30): the sheet was translucent
+   (#0b0620f7 / rgba .97) — page text bled through and collided with menu
+   items. It is now FULLY OPAQUE obsidian with its own scroll; blur is
+   gone because there is nothing left to blur. No page content can be
+   legible through it at any scroll position. */
+.ic{width:19px;height:19px;display:inline-block;vertical-align:middle}
+.navicon .ic{display:block;margin:auto}
+.sheet-btn .ic{width:18px;height:18px;flex:none}
+.acct-glyph{font-size:12px;font-weight:800;letter-spacing:.4px;line-height:1}
+.sheet-btn .acct-glyph{font-size:13px}
+.follow-btn.following{border-color:var(--acid);color:var(--acid)}
+.fresh-why{font-size:11px;font-weight:800;letter-spacing:.4px;color:var(--champagne)}
+.badge-new{background:#123F2A;color:#B8FFD2;border-color:#2F7A4D}
+.match-row{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.match-k{font-size:11px;font-weight:900;letter-spacing:1.2px;color:var(--champagne)}
+.match-list{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.match-chip{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:50px;padding:5px 6px 5px 8px;font-size:13px;color:var(--bone)}
+.match-mono{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#33373D;color:var(--champagne);border:1.5px solid rgba(189,165,121,.65);font-family:'Fraunces',serif;font-size:10px;font-weight:700;flex:none}
+body.light .match-chip{background:#FFFDF7;color:#241F31}
+body.light .match-mono{background:#EFE9DB;color:#7A6234}
+.follow-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line)}
+.follow-row:last-child{border-bottom:0;padding-bottom:4px}
+@media(max-width:1023px){
+ .mobile-sheet{background:#0E1013;overflow-y:auto;max-height:calc(100dvh - 120px);-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+ body.light .mobile-sheet{background:#FFFDF7}
+}
