@@ -795,3 +795,11 @@ body.light .mini-player{background:#FFFDF7;color:#241F31;border-color:#BDA579}
 body.light .sound-prog,body.light .mini-prog{background:#E4DCC8}
 @media(max-width:900px){.sound-worlds{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:720px){.lic-opts{grid-template-columns:minmax(0,1fr)}.buy-grid{grid-template-columns:minmax(0,1fr)}.sound-cols{grid-template-columns:minmax(0,1fr)}.sound-stage{aspect-ratio:4/3}.mini-player{bottom:10px;padding:9px 10px}.mini-player .sound-time{display:none}}
+/* ============ CENSUS-2 FIXES (v59) ============ */
+.badge-violet{background:#7a3cff;color:#fff}
+body.light .mini-info span{color:#5d5570}
+body.light .mini-scene{color:#8a6d1f}
+body.light .mini-close{color:#5d5570}
+body.has-mini #toast{bottom:96px}
+body.has-mini .install-bar{bottom:calc(96px + env(safe-area-inset-bottom))}
+@media(max-width:380px){.mini-player{gap:8px}.mini-thumb{width:38px;height:38px}.mini-scene{display:none}}
