@@ -745,3 +745,53 @@ body.light .identity-panel{background:#FFFDF7}
 body.light .id-row dd,body.light .id-attest{color:#241F31}
 body.light .id-row dt{color:#7A6234}
 @media(max-width:720px){.identity-panel{padding:17px}.id-row dt{flex-basis:88px}}
+
+/* ============ PAINTED PYTHON SOUND (v58) ============
+   The Trail: genre worlds are hue-keyed scene tiles (aspect-ratio
+   locked, label structurally inside the tile — the census law).
+   The track scene gives the painting the largest visual area; the
+   player is pure-audio demo state (progress + time, no video, no
+   visualizer). Transactional surfaces stay saturation-restrained;
+   the mini-player is contained to the viewport at every width. */
+.sound-worlds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;align-items:start}
+.sound-world{position:relative;display:block;width:100%;aspect-ratio:4/3;border-radius:16px;overflow:hidden;border:1px solid var(--line);padding:0;background:#111316;text-align:left;min-width:0}
+.sound-world img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.sound-world-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,10,14,0) 34%,rgba(9,10,14,.82))}
+.sound-world-label{position:absolute;left:14px;right:14px;bottom:12px;display:block;color:#F4F0E8}
+.sound-world-label b{font-family:'Syne',sans-serif;font-weight:800;font-size:19px;letter-spacing:1.2px;display:block;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+.sound-world-label small{font-size:11.5px;font-weight:700;letter-spacing:.08em;color:var(--h);text-transform:uppercase}
+.track-card{padding:0;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.track-art{position:relative;aspect-ratio:4/3;overflow:hidden}
+.track-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.track-body{padding:16px;display:flex;flex-direction:column;gap:7px}
+.track-body h3{margin:0}
+.track-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:4px 0}
+.track-open{text-decoration:none;display:inline-flex;align-items:center;padding:8px 12px;border-radius:10px;font-size:12px}
+.sound-stage{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:16/10;border:1px solid var(--line);margin-bottom:18px}
+.sound-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.sound-stage .tag{position:absolute;left:14px;bottom:14px;z-index:2}
+.sound-player{margin-bottom:18px}
+.sound-prog-wrap{display:flex;align-items:center;gap:12px}
+.sound-prog{flex:1;min-width:0;height:8px;border-radius:99px;background:#2B2733;overflow:hidden}
+.sound-prog i{display:block;height:100%;width:0;background:var(--mh,#39D0C4);border-radius:99px;transition:width .25s linear}
+.sound-time{font-size:12px;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.sound-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;margin-bottom:18px;align-items:start}
+.lic-opts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.lic-opt{display:flex;flex-direction:column;gap:7px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:15px 16px;color:var(--bone);min-width:0}
+.lic-opt b{font-family:'Syne',sans-serif;font-size:15px;letter-spacing:1.2px}
+.lic-opt span{font-size:12.5px;line-height:1.55;color:var(--muted);overflow-wrap:anywhere}
+.lic-opt em{font-style:normal;font-size:12.5px;font-weight:800;color:var(--champagne)}
+.lic-opt.on{border-color:var(--champagne);box-shadow:0 0 0 1px var(--champagne)}
+.buy-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:start}
+.mile-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:10px 0;border-top:1px solid var(--line)}
+.mini-player{position:fixed;left:50%;transform:translateX(-50%);bottom:14px;width:min(680px,calc(100vw - 24px));z-index:80;display:flex;gap:12px;align-items:center;background:#0E1013;border:1px solid var(--champagne);border-radius:14px;padding:10px 12px;box-shadow:0 18px 40px rgba(0,0,0,.55);color:#F4F0E8}
+.mini-thumb{width:46px;height:46px;border-radius:9px;object-fit:cover;flex:none}
+.mini-info{flex:1;min-width:0}
+.mini-info b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px}
+.mini-info span{font-size:11.5px;color:var(--muted);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mini-prog{margin-top:6px;background:#2B2733}
+.mini-player .mini-btn{flex:none}
+body.light .mini-player{background:#FFFDF7;color:#241F31;border-color:#BDA579}
+body.light .sound-prog,body.light .mini-prog{background:#E4DCC8}
+@media(max-width:900px){.sound-worlds{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.lic-opts{grid-template-columns:minmax(0,1fr)}.buy-grid{grid-template-columns:minmax(0,1fr)}.sound-cols{grid-template-columns:minmax(0,1fr)}.sound-stage{aspect-ratio:4/3}.mini-player{bottom:10px;padding:9px 10px}.mini-player .sound-time{display:none}}
