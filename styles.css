@@ -718,3 +718,30 @@ body.light .match-mono{background:#EFE9DB;color:#7A6234}
 .prop-item>*{min-width:0}
 .prop-item span{overflow-wrap:anywhere}
 @media(max-width:480px){.spot-stage{padding:18px}}
+
+/* ============ PHASE 4 — ORIGINAL ART IDENTITY (v57) ============
+   Transactional register: graphite panel, bone text, champagne
+   labels; the category hue appears ONLY on the kind marker.
+   No glows — the record is the trust surface; the art is the color. */
+.identity-panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin:24px 0}
+.id-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.id-kind{font-size:11px;font-weight:900;letter-spacing:1.6px;border:1px solid var(--champagne);border-radius:50px;padding:7px 12px;color:var(--champagne)}
+.id-kind-none{color:var(--muted);border-color:var(--line)}
+.id-creator{font-size:13px;color:var(--muted)}
+.id-creator .text-link{font-size:13px}
+.id-rows{margin:0}
+.id-row{display:flex;gap:14px;padding:8px 0;border-top:1px solid var(--line)}
+.id-row dt{flex:0 0 108px;font-size:10.5px;font-weight:900;letter-spacing:1.4px;color:var(--champagne);padding-top:2px}
+.id-row dd{margin:0;font-size:13.5px;line-height:1.55;color:var(--bone);overflow-wrap:anywhere}
+.id-note{font-size:13.5px;line-height:1.65;color:var(--muted);margin:4px 0 0}
+.id-attest{font-family:'Fraunces',serif;font-style:italic;font-size:15.5px;line-height:1.65;color:var(--bone);margin:16px 0 6px}
+.id-attest-note{font-size:12px;line-height:1.65;color:var(--muted);margin:0}
+.id-pay{font-size:12px;line-height:1.65;color:var(--muted);border-top:1px solid var(--line);margin:16px 0 0;padding-top:12px}
+.kind-chip{font-size:10px;font-weight:900;letter-spacing:1.2px;white-space:nowrap}
+.id-check{display:flex;gap:9px;align-items:flex-start;margin-top:12px}
+.form-group label.id-check{font-size:12.5px;font-weight:600;letter-spacing:0;text-transform:none;line-height:1.55;color:var(--muted)}
+.id-check input{flex:none;width:17px;height:17px;margin-top:1px;accent-color:var(--champagne)}
+body.light .identity-panel{background:#FFFDF7}
+body.light .id-row dd,body.light .id-attest{color:#241F31}
+body.light .id-row dt{color:#7A6234}
+@media(max-width:720px){.identity-panel{padding:17px}.id-row dt{flex-basis:88px}}
